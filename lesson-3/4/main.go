@@ -34,6 +34,6 @@ func main() {
 	fmt.Scan(&days)
 	fmt.Printf("Задайте необходимую высоту бамбука (см): ")
 	fmt.Scan(&heightBamboo)
-	fmt.Printf("\n\nБамбук вырастет на %dсм за %d дней\n", rootBamboo+(growBamboo-eatBamboo)*days, days)
-	fmt.Printf("\nТребуется %d дней чтобы бамбук вырос на %d метров\n", (heightBamboo-rootBamboo)/(growBamboo-eatBamboo), heightBamboo)
+	fmt.Printf("\n\nБамбук вырастет на %dсм за %d дней\n", rootBamboo+growBamboo*days-eatBamboo*(days-1), days)
+	fmt.Printf("\nТребуется %d дней чтобы бамбук вырос на %d сантиметров\n", (heightBamboo-rootBamboo)/(growBamboo-eatBamboo), heightBamboo)
 }
