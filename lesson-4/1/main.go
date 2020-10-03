@@ -10,9 +10,9 @@ func main() {
 	fmt.Println("Расчет проходного балла по результатам ЕГЭ")
 	fmt.Printf("Введите оценку за первый экзамен: ")
 	fmt.Scan(&fistExam)
-	fmt.Printf("Введите оценку за первый экзамен: ")
+	fmt.Printf("Введите оценку за второй экзамен: ")
 	fmt.Scan(&secondExam)
-	fmt.Printf("Введите оценку за первый экзамен: ")
+	fmt.Printf("Введите оценку за третий экзамен: ")
 	fmt.Scan(&thirdExam)
 
 	if fistExam < 0 || secondExam < 0 || thirdExam < 0 || fistExam > 100 || secondExam > 100 || thirdExam > 100 {
