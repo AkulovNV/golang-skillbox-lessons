@@ -17,6 +17,6 @@ func main() {
 	if fistNum == secondNum || secondNum == thirdNum || thirdNum == fistNum {
 		fmt.Println("Среди заданных чисел имеются одинаковые")
 	} else {
-		fmt.Println("Среди заданных чисел отсутствуют одиковые")
+		fmt.Println("Среди заданных чисел отсутствуют одинаковые")
 	}
 }
