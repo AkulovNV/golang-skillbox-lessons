@@ -22,7 +22,7 @@ func main() {
 
 	for {
 
-		// Определяем максимальный этаж, с котором вызвали лифт
+		// Определяем максимальный этаж, с которого вызвали лифт
 		if passenger1 > passenger2 && passenger1 > passenger3 {
 			maxFloor = passenger1
 		} else if passenger2 > passenger1 && passenger2 > passenger3 {
@@ -31,7 +31,7 @@ func main() {
 			maxFloor = passenger3
 		}
 
-		// Определяем на каком этаже лифт
+		// Определяем направление движения лифта
 		if currentFloor == maxFloor {
 			direction = -1
 		} else if currentFloor == minFloor {
