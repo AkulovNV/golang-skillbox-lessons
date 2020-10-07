@@ -65,18 +65,14 @@ func main() {
 					fmt.Println("Емкость второй корзины заполнена")
 					fmt.Println("Емкость первой корзины заполнена")
 				}
-			} else if maxFistSize == maxSecondSize {
+			} else if maxFistSize == maxSecondSize && maxFistSize > maxThirdSize {
 				fmt.Println("Емкость первой корзины заполнена")
 				fmt.Println("Емкость второй корзины заполнена")
 				fmt.Println("Емкость третье корзины заполнена")
-			} else if maxFistSize == maxThirdSize {
+			} else if maxFistSize == maxThirdSize && maxFistSize > maxSecondSize {
 				fmt.Println("Емкость первой корзины заполнена")
 				fmt.Println("Емкость третье корзины заполнена")
 				fmt.Println("Емкость второй корзины заполнена")
-			} else if maxFistSize == maxThirdSize {
-				fmt.Println("Емкость второй корзины заполнена")
-				fmt.Println("Емкость третье корзины заполнена")
-				fmt.Println("Емкость первой корзины заполнена")
 			} else {
 				fmt.Println("Емкость первой корзины заполнена")
 				fmt.Println("Емкость второй корзины заполнена")
