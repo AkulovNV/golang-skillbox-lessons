@@ -30,14 +30,20 @@ func lemonadeChange(bills [4]int) bool {
 			notes5++
 		case 10:
 			notes10++
-			notes5--
-		case 20:
-			notes20++
-			if notes10 > 0 {
-				notes10--
+			if notes5 > 0 {
 				notes5--
 			} else {
+				return false
+			}
+		case 20:
+			notes20++
+			if notes10 > 0 && notes5 > 0 {
+				notes10--
+				notes5--
+			} else if notes5 > 2 {
 				notes5 -= 3
+			} else {
+				return false
 			}
 		default:
 			fmt.Println("Фальшивая купюра")
