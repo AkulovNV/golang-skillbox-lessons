@@ -28,19 +28,17 @@ func lemonadeChange(bills [4]int) bool {
 		switch bill {
 		case 5:
 			notes5++
-			fmt.Println("notes5:", notes5, "notes10:", notes10, "notes20:", notes20)
 		case 10:
 			notes10++
 			notes5--
 		case 20:
 			notes20++
-			if notes10 > 1 {
+			if notes10 > 0 {
 				notes10--
 				notes5--
 			} else {
 				notes5 -= 3
 			}
-			fmt.Println("notes5:", notes5, "notes10:", notes10, "notes20:", notes20)
 		default:
 			fmt.Println("Фальшивая купюра")
 		}
