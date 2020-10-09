@@ -6,11 +6,13 @@ import (
 )
 
 func main() {
-	fmt.Println("Количество зеркальных билетов в диапазоне от 100000 до 999999: ")
-	var counter int
+	fmt.Println("Посчитать количество билетов между счастливыми, у которых в промежутке больше всего обычных")
+	fmt.Println("-----------")
+	maxCounter := 0
 	luckyTicket := 100000
+	var maxTicket int
 	for ticket := 100000; ticket < 1000000; ticket++ {
-		var result1, result2 int
+		var result1, result2, counter int
 		for n := 0; n < 3; n++ {
 			pos := ticket / int(math.Pow10(n)) % 10
 			result1 += pos
@@ -22,8 +24,11 @@ func main() {
 		if result1 == result2 {
 			counter = ticket - luckyTicket
 			luckyTicket = ticket
-			fmt.Printf("Счастливый билет: %d, количество билетов до него начиная от предыдущего счастливого: %d\n", luckyTicket, counter)
+		}
+		if counter > maxCounter {
+			maxCounter = counter
+			maxTicket = ticket
 		}
 	}
-	// fmt.Println(counter)
+	fmt.Printf("Максимальное количество билетов между %d и %d составляет - %d\n", maxTicket, maxTicket-maxCounter, maxCounter)
 }
