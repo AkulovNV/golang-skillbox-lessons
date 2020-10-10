@@ -11,12 +11,8 @@ func main() {
 	fmt.Scan(&num1)
 	fmt.Printf("Введите второе число: ")
 	fmt.Scan(&num2)
-	n1 := int32(num1)
-	n2 := int32(num2)
-	result := n1 * n2
+	result := int64(num1) * int64(num2)
 	switch {
-	case result < math.MinInt32:
-		fmt.Printf("Результат умножения: %d\nПодходящий формат: %T\n", result, int64(result))
 	case result < math.MinInt16:
 		fmt.Printf("Результат умножения: %d\nПодходящий формат: %T\n", result, int32(result))
 	case result < math.MinInt8:
@@ -27,9 +23,7 @@ func main() {
 		fmt.Printf("Результат умножения: %d\nПодходящий формат: %T\n", result, uint8(result))
 	case result <= math.MaxUint16:
 		fmt.Printf("Результат умножения: %d\nПодходящий формат: %T\n", result, uint16(result))
-	case int64(result) <= math.MaxUint32:
-		fmt.Printf("Результат умножения: %d\nПодходящий формат: %T\n", result, uint32(result))
 	default:
-		fmt.Printf("Результат умножения: %d\nПодходящий формат: %T\n", result, uint64(result))
+		fmt.Printf("Результат умножения: %d\nПодходящий формат: %T\n", result, uint32(result))
 	}
 }
