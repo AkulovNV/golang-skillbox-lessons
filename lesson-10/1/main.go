@@ -18,15 +18,10 @@ func main() {
 	fact := 1
 	k := 0
 	for {
-		fmt.Println("Итерация:")
-		fmt.Println("")
-		if k > 0 {
-			fact *= 2 * k * (2*k + 1)
-			fmt.Println("fact:", fact)
+		if k > 1 {
+			fact *= k
 		}
 		result += math.Pow(x, float64(k)) / float64(fact)
-		fmt.Println("result:", result)
-		fmt.Println("check:", result-prevResult, "epsilon:", epsilon)
 		if math.Abs(result-prevResult) < epsilon {
 			fmt.Println("")
 			fmt.Println("Итог:", result)
