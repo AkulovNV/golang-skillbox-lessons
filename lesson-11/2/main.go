@@ -22,7 +22,7 @@ func main() {
 			continue
 		} else {
 			stringNumbers += string(str[i])
-			fmt.Println(i, string(str[i]), "|", stringNumbers)
+			// fmt.Println(i, string(str[i]), "|", stringNumbers)
 		}
 	}
 	fmt.Println(stringNumbers)
