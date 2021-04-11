@@ -1,21 +1,24 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
-func add(x int, y int) int {
-	return x + y
+func double(x int) float64 {
+	return math.Pow(float64(x), 2)
 }
 
-func multi(x int, y int) int {
-	return x * y
+func sqrt(y int) float64 {
+	return math.Sqrt(float64(y))
 }
 
-func operator(f1 func(int, int) int, f2 func(int, int) int) {
-	n1, n2 := 10, 20
-	fmt.Println("Результат умножения функции f2: ", f2(n1, n2))
-	fmt.Println("Результат сложения функции f1: ", f1(n1, n2))
+func operator(f1 func(int) float64, f2 func(int) float64, a, b int) {
+	fmt.Println("Результат вычисления функции f1: ", f1(b))
+	fmt.Println("Результат вычисления функции f2: ", f2(a))
 }
 
 func main() {
-	operator(add, multi)
+	n1, n2 := 10, 20
+	operator(double, sqrt, n1, n2)
 }
