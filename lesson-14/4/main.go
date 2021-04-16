@@ -8,20 +8,22 @@ package main
 
 import "fmt"
 
-const num1 = 100
-const num2 = 55
-const num3 = 235
+var (
+	num1 = 100
+	num2 = 55
+	num3 = 235
+)
 
 func sum1(a *int) int {
-	*a += num1
+	*a += num1 + num2
 	return *a
 }
 func sum2(a *int) int {
-	*a += num2
+	*a += num2 + num3
 	return *a
 }
 func sum3(a *int) int {
-	*a += num3
+	*a += num3 + num1
 	return *a
 }
 func main() {
