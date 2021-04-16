@@ -11,7 +11,11 @@ import (
 )
 
 func checkParity(a int) bool {
-	return *a%2 == 0
+	if a%2 == 0 {
+		return true
+	} else {
+		return false
+	}
 }
 
 func main() {
