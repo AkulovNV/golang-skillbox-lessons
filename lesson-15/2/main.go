@@ -7,14 +7,19 @@ package main
 
 import "fmt"
 
+func reversArr(arr [10]int) (revArr [10]int) {
+	for k, v := range arr {
+		revArr[len(arr)-1-k] = v
+	}
+	return
+}
+
 func main() {
 	var arr [10]int
-	var reversArr [10]int
 	for i := range arr {
-		fmt.Printf("Введите целое число: ")
+		fmt.Printf("Задайте элемент массива (число): ")
 		fmt.Scan(&arr[i])
-		reversArr[len(arr)-1-i] = arr[i]
 	}
 	fmt.Println("Исходный массив:", arr)
-	fmt.Println("Реверсивный массив:", reversArr)
+	fmt.Println("Реверсивный массив:", reversArr(arr))
 }
