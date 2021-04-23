@@ -22,7 +22,7 @@ func main() {
 	var num int
 	fmt.Printf("Введите целое число: ")
 	fmt.Scan(&num)
-	if checkParity(num) == true {
+	if checkParity(num) {
 		fmt.Println("четное")
 	} else {
 		fmt.Println("нечетное")
